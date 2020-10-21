@@ -98,7 +98,7 @@ def image_detect(filename):
   img[markers == -1] = [255,0,0]
 
   im1 = cv2.cvtColor(img,cv2.COLOR_HSV2RGB)
-  ShowImage('Watershed segmented image',im1,'gray')
+  #ShowImage('Watershed segmented image',im1,'gray')
   cv2.imwrite('./static/watershed.jpg', im1, [int(cv2.IMWRITE_JPEG_QUALITY), 100])
 
   brain_mask = np.uint8(brain_mask)
