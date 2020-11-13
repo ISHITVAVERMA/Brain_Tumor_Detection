@@ -35,7 +35,7 @@ def ShowImage(title,img,ctype):
   plt.axis('off')
   plt.title(title)
   plt.show()
-img= cv2.imread(r'C:\Users\ishit\Desktop\Brain-Tumor-Detection-using-Canny-Edge-Technique-and-Convolution_Neural_Network\a.png')
+img= cv2.imread(r'C:\Users\ishit\Desktop\Brain-Tumor-Detection-using-Canny-Edge-Technique-and-Convolution_Neural_Network\NT2.jpeg')
 gray= cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
 ShowImage('Brain MRI',gray,'gray')
 
@@ -55,7 +55,7 @@ brain_out = img.copy()
 #In a copy of the original image, clear those pixels that don't correspond to the brain
 brain_out[brain_mask==False] = (0,0,0)
 
-img = cv2.imread(r'C:\Users\ishit\Desktop\Brain-Tumor-Detection-using-Canny-Edge-Technique-and-Convolution_Neural_Network\a.png')
+img = cv2.imread(r'C:\Users\ishit\Desktop\Brain-Tumor-Detection-using-Canny-Edge-Technique-and-Convolution_Neural_Network\NT2.jpeg')
 gray = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
 ret, thresh = cv2.threshold(gray,0,255,cv2.THRESH_BINARY_INV+cv2.THRESH_OTSU)
 #canny-edge-detection
